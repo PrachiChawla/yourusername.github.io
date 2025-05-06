@@ -5,15 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Name | Data Analyst</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; color: #333; }
-    header { background: #4a90e2; color: white; padding: 2rem 1rem; text-align: center; }
-    nav a { color: white; margin: 0 1rem; text-decoration: none; }
-    section { padding: 2rem; max-width: 900px; margin: auto; }
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f0f4f8; color: #333; transition: background 0.3s ease; }
+    header { background: #4a90e2; color: white; padding: 2rem 1rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
+    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+    nav a:hover { color: #d1e9ff; }
+    section { padding: 2rem; max-width: 900px; margin: auto; animation: fadeIn 1s ease-in-out; }
     h2 { color: #4a90e2; }
-    .project-card { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 1rem; }
+    .project-card { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .project-card:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
     .project-card h3 { margin-top: 0; }
-    .project-card a { color: #4a90e2; text-decoration: none; }
+    .project-card a { color: #4a90e2; text-decoration: none; font-weight: bold; }
+    .project-card a:hover { text-decoration: underline; }
+    .project-card img { max-width: 100%; height: auto; border-radius: 6px; margin-top: 1rem; }
     footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #777; }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+
+    /* Contact links */
+    #contact a { color: #4a90e2; text-decoration: none; margin-right: 10px; }
+    #contact a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -29,6 +46,7 @@
 
   <section id="about">
     <h2>About Me</h2>
+    <img src="https://via.placeholder.com/150" alt="Your photo" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover; display: block; margin-bottom: 1rem;">
     <p>I’m a data analyst with a background in economics and a passion for turning raw data into business insights. Skilled in SQL, Python, R, Tableau, and data storytelling.</p>
   </section>
 
@@ -39,28 +57,34 @@
       <h3>Texture Tales – SQL Analytics</h3>
       <p>Analyzed a fictional art marketplace using SQL to uncover artist performance, customer behavior, and sales trends.</p>
       <p><strong>Tools:</strong> SQL, Excel</p>
-      <p><a href="https://github.com/yourusername/texture-tales-sql">View on GitHub</a></p>
+      <img src="https://via.placeholder.com/800x400?text=Texture+Tales+SQL+Project" alt="Texture Tales Project Screenshot">
+      <p><a href="https://github.com/yourusername/texture-tales-sql" target="_blank">View on GitHub</a></p>
     </div>
 
     <div class="project-card">
       <h3>California Wildfire Dashboard</h3>
       <p>Interactive Tableau dashboard analyzing wildfire trends, damage assessment, and fire incidents over time and location.</p>
       <p><strong>Tools:</strong> Tableau</p>
-      <p><a href="https://public.tableau.com/app/profile/yourname">View Dashboard</a></p>
+      <img src="https://via.placeholder.com/800x400?text=California+Wildfire+Dashboard" alt="Wildfire Dashboard Screenshot">
+      <p><a href="https://public.tableau.com/app/profile/yourname" target="_blank">View Dashboard</a></p>
     </div>
 
     <div class="project-card">
       <h3>Loan Approval Prediction</h3>
       <p>Built a machine learning model to predict loan approvals based on applicant data, using logistic regression and feature engineering.</p>
       <p><strong>Tools:</strong> Python, Pandas, Scikit-learn</p>
-      <p><a href="https://github.com/yourusername/loan-prediction">View on GitHub</a></p>
+      <img src="https://via.placeholder.com/800x400?text=Loan+Approval+Prediction" alt="Loan Approval Project Screenshot">
+      <p><a href="https://github.com/yourusername/loan-prediction" target="_blank">View on GitHub</a></p>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>📧 your.email@example.com</p>
-    <p>🔗 <a href="https://www.linkedin.com/in/yourlinkedin">LinkedIn</a> | <a href="https://github.com/yourusername">GitHub</a></p>
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>
+      <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    </p>
   </section>
 
   <footer>
